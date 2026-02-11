@@ -214,14 +214,15 @@ class EngineRPCWidget implements m.ClassComponent<OptionalTraceImplAttrs> {
     // RPC server is shut down after we load the UI and cached httpRpcState)
     // this will eventually become  consistent once the engine is created.
     if (mode === undefined) {
-      if (
-        AppImpl.instance.httpRpc.httpRpcAvailable &&
-        AppImpl.instance.httpRpc.newEngineMode === 'USE_HTTP_RPC_IF_AVAILABLE'
-      ) {
-        mode = 'HTTP_RPC';
-      } else {
-        mode = 'WASM';
-      }
+      mode = 'WASM';
+      // if (
+      //   AppImpl.instance.httpRpc.httpRpcAvailable &&
+      //   AppImpl.instance.httpRpc.newEngineMode === 'USE_HTTP_RPC_IF_AVAILABLE'
+      // ) {
+      //   mode = 'HTTP_RPC';
+      // } else {
+      //   mode = 'WASM';
+      // }
     }
 
     if (mode === 'HTTP_RPC') {

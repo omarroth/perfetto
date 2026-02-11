@@ -141,9 +141,9 @@ async function createEngine(
   // Check if there is any instance of the trace_processor_shell running in
   // HTTP RPC mode (i.e. trace_processor_shell -D).
   let useRpc = false;
-  if (app.httpRpc.newEngineMode === 'USE_HTTP_RPC_IF_AVAILABLE') {
-    useRpc = (await HttpRpcEngine.checkConnection()).connected;
-  }
+  // if (app.httpRpc.newEngineMode === 'USE_HTTP_RPC_IF_AVAILABLE') {
+  //   useRpc = (await HttpRpcEngine.checkConnection()).connected;
+  // }
 
   const descriptorBlobs: Uint8Array[] = [];
   for (const b64Str of await app.protoDescriptors()) {
