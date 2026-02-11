@@ -70,6 +70,7 @@ export function initAnalytics(
   embeddedMode: boolean,
   enable: boolean,
 ): AnalyticsInternal {
+  return new NullAnalytics();
   // Only initialize logging on the official site and on localhost (to catch
   // analytics bugs when testing locally).
   // Skip analytics is the fragment has "testing=1", this is used by UI tests.

@@ -109,11 +109,11 @@ export class HomePage implements m.ClassComponent {
           ),
         ),
       ),
-      m(
-        'a.pf-privacy',
-        {href: 'https://policies.google.com/privacy', target: '_blank'},
-        'Privacy policy',
-      ),
+      // m(
+      //   'a.pf-privacy',
+      //   {href: 'https://policies.google.com/privacy', target: '_blank'},
+      //   'Privacy policy',
+      // ),
     );
   }
 }
